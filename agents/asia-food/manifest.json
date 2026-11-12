@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "agency": {
+    "id": "asia-food",
+    "name": "Asia Food",
+    "website": "https://www.asiafood.com.br",
+    "catalogFeed": "https://www.asiafood.com.br/google-merchant.xml",
+    "locale": "pt-BR"
+  },
+  "runtime": {
+    "provider": "codex",
+    "mode": "real-session",
+    "autoStart": false,
+    "requiresHumanLaunch": true
+  },
+  "agents": [
+    { "id": "gael", "name": "Gael", "role": "Coordenador da agência", "instructions": "gael/AGENT.md", "tools": ["delegate_to_configured_agents"], "canPublish": false },
+    { "id": "produtos", "name": "Produtos", "role": "Especialista em catálogo", "instructions": "produtos/AGENT.md", "tools": ["read_official_catalog"], "canPublish": false },
+    { "id": "marketing", "name": "Marketing", "role": "Estrategista comercial", "instructions": "marketing/AGENT.md", "tools": ["read_confirmed_catalog", "create_campaign_brief"], "canPublish": false },
+    { "id": "conteudo", "name": "Conteúdo", "role": "Redator publicitário", "instructions": "conteudo/AGENT.md", "tools": ["read_confirmed_catalog", "create_content_draft"], "canPublish": false },
+    { "id": "design", "name": "Design", "role": "Diretor de arte", "instructions": "design/AGENT.md", "tools": ["read_confirmed_catalog", "create_design_brief"], "canPublish": false },
+    { "id": "publicacao", "name": "Publicação", "role": "Revisor e responsável pelo fluxo de aprovação", "instructions": "publicacao/AGENT.md", "tools": ["review_draft", "request_human_approval"], "canPublish": false }
+  ],
+  "safety": {
+    "humanApprovalRequired": true,
+    "publishingEnabled": false,
+    "externalWritesEnabled": false,
+    "shellAccessByDefault": false,
+    "secretsInProfilesAllowed": false
+  }
+}
