@@ -10,6 +10,10 @@ do meio (0.**3**.0).
 
 ## [Não lançado]
 
+### Adicionado
+
+- Pacote independente de seis perfis de agentes da agência Asia Food (Gael, Produtos, Marketing, Conteúdo, Design e Publicação), com manifesto, instruções por função e regras de segurança. Os perfis ainda não iniciam sessões nem aparecem automaticamente no escritório; a integração com o Habblaud é uma etapa posterior.
+
 ## [1.0.3] - 2026-10-16
 
 ### Corrigido
